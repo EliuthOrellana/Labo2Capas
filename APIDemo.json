@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "db3a9f3f-9ef6-45d4-958d-34fa73b2db56",
+		"name": "Laboratorio2API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39214871"
+	},
+	"item": [
+		{
+			"name": "crearMago",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVjYUBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InVjYSIsInVzZXJJZCI6IjY3NTA4ZDMxYzg0M2FkNGQzZTQ1ZWI3MCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczMzMzNTEwNCwiZXhwIjoxNzMzMzQyMzA0fQ.6nvdlf408pTQDDFWl6NNQF-cZ0td7smGF8c3Yom1NOo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Eliuth Larios\",\n  \"house\": \"Gryffindor\",\n  \"patronus\": \"Stag\",\n  \"isDeathEater\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/wizards/create"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/wizards/create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVjYUBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InVjYSIsInVzZXJJZCI6IjY3NTA4ZDMxYzg0M2FkNGQzZTQ1ZWI3MCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczMzMzNTEwNCwiZXhwIjoxNzMzMzQyMzA0fQ.6nvdlf408pTQDDFWl6NNQF-cZ0td7smGF8c3Yom1NOo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Eliuth Larios\",\n  \"house\": \"Gryffindor\",\n  \"patronus\": \"Stag\",\n  \"isDeathEater\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/wizards/create"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 May 2026 05:23:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"25cb2aff-88f1-4317-9e91-6bd2658866b6\",\n    \"name\": \"Eliuth Larios\",\n    \"house\": \"Gryffindor\",\n    \"patronus\": \"Stag\",\n    \"isDeathEater\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Todos los Magos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/wizards/getAll"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/wizards/getAll",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/wizards/getAll"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 May 2026 05:23:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"fc198580-f78d-483a-ab28-4e2309b0e9ee\",\n        \"name\": \"Harry Potter\",\n        \"house\": \"Gryffindor\",\n        \"patronus\": \"Stag\",\n        \"isDeathEater\": false\n    },\n    {\n        \"id\": \"ffe0674a-cca2-48b1-88b4-e62457897347\",\n        \"name\": \"Marden Larios\",\n        \"house\": \"Gryffindor\",\n        \"patronus\": \"Stag\",\n        \"isDeathEater\": false\n    },\n    {\n        \"id\": \"7e9ae3a6-40cd-4835-9f80-9834b54cc601\",\n        \"name\": \"Eliuth Larios\",\n        \"house\": \"Gryffindor\",\n        \"patronus\": \"Stag\",\n        \"isDeathEater\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Actualizar Mago",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"7e9ae3a6-40cd-4835-9f80-9834b54cc601\",\n    \"name\": \"Eliuth Larios\",\n    \"house\": \"Gryffindor\",\n    \"patronus\": \"Stag\",\n    \"isDeathEater\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/wizards/update/7e9ae3a6-40cd-4835-9f80-9834b54cc601"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/wizards/update/7e9ae3a6-40cd-4835-9f80-9834b54cc601",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"7e9ae3a6-40cd-4835-9f80-9834b54cc601\",\n    \"name\": \"Eliuth Larios\",\n    \"house\": \"Gryffindor\",\n    \"patronus\": \"Stag\",\n    \"isDeathEater\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/wizards/update/7e9ae3a6-40cd-4835-9f80-9834b54cc601"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 May 2026 05:21:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"7e9ae3a6-40cd-4835-9f80-9834b54cc601\",\n    \"name\": \"Eliuth Larios\",\n    \"house\": \"Gryffindor\",\n    \"patronus\": \"Stag\",\n    \"isDeathEater\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "DeathEaters",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/api/wizards/deathEaters"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/api/wizards/deathEaters",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/wizards/deathEaters"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 May 2026 05:23:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"7e9ae3a6-40cd-4835-9f80-9834b54cc601\",\n        \"name\": \"Eliuth Larios\",\n        \"house\": \"Gryffindor\",\n        \"patronus\": \"Stag\",\n        \"isDeathEater\": true\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete Harry",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/api/wizards/delete/fc198580-f78d-483a-ab28-4e2309b0e9ee"
+			},
+			"response": [
+				{
+					"name": "Delete Harry",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/wizards/delete/fc198580-f78d-483a-ab28-4e2309b0e9ee"
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 May 2026 05:26:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
